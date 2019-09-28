@@ -68,7 +68,7 @@ public class Controller {
             BigDecimal total = amount.add(tip);
             BigDecimal person = new BigDecimal(people.getText());
             BigDecimal Per_Person = total.divide(person);
-            PerPersonTextField.setText(String.valueOf(Per_Person));
+            PerPersonTextField.setText(currency.format(Per_Person));
             
             tipTextField.setText(currency.format(tip));
             totalTextField.setText(currency.format(total));
